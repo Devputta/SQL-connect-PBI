@@ -1,0 +1,15 @@
+CONNECTION 
+
+sql to powerbi
+
+STEPS TO CONNECT SQL WITH POWERBI 
+
+goto -> home ribbon --> select "get data" --> scroll down select "more" ---> again scroll down then select which ever database or server want you to select --> then small window will appear and ask for credential "choose window or database" ---> then it will connect to sql then you can load data to POWERBI 
+
+SOME DaX MEASURES
+
+1.Total Boxes = SUM(sales[Boxes]) --> it will count the total boxes using sum function.
+2.Total Amount = SUM(sales[Amount]) --> same as previse it will count the total amount using sum function.
+3.Shipment Count = COUNTROWS(sales) --> this will count the entire rows of sales table for shipment count because 1 row is equal to 1 shipment.
+4.Low BOX Shipment = CALCULATE([Shipment Count], sales[Boxes]<50) --> it will calculate low shipment using calculated measured shipment count and sales tables boxes which is less then 50.
+5.LBS = DIVIDE([Low BOX Shipment], [Shipment Count]) --> it will calculate the ratio of low shipment count using divide function.
