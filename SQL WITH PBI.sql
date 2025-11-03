@@ -25,3 +25,9 @@ select s.*, g.* from sales s straight_join  geo g on s.GeoID = g.GeoID;
 select * from sales order by Boxes;
 
 select * from sales where Boxes < 50;
+
+select s.* from sales s join geo g on s.GeoID = g.GeoID 
+where g.Geo = "Canada";
+
+select s.*,p.Product
+from sales s join products p on p.PID = s.PID where s.PID = "P11";
