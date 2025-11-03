@@ -1,19 +1,22 @@
-📊 Dashboard Preview
-Sales Report for Awesome Chocolates
+📊 Sales Dashboard – Awesome Chocolates (SQL + Power BI)
 
-Below is the Power BI dashboard built using SQL data:
+This project demonstrates how to integrate MySQL Database with Power BI to build a dynamic sales analytics dashboard using real-time data and DAX calculations.
 
-(Replace the link with your own Power BI screenshot URL — uploading soon is recommended)
+📸 Dashboard Preview
 
-Key Insights
+https://github.com/user-attachments/assets/71efc0b3-6566-440a-8e32-d0bedc2bbf72
 
-✔️ $1.87M Total Sales
-✔️ 112K Total Boxes Sold
-✔️ 344 Total Shipments
-✔️ 31 Low Box Shipments
-✔️ 9% Low Box Shipment Ratio
-✔️ Sales Trend visualization & Top Salesperson performance
+The dashboard provides key business insights such as sales performance, shipment trends, product movement, and low-box shipment analysis.
 
+🔍 Key Business Insights
+Insight	Value
+💰 Total Sales	$1.87M
+📦 Total Boxes Sold	112K
+🚚 Total Shipments	344
+📉 Low-Box Shipments	31
+📊 Low-Box Shipment Ratio	9%
+🏆 Top Salesperson Performance	Visualized
+📈 Sales Trend	Monthly/Weekly insights
 🔗 Connecting SQL Database to Power BI
 ✅ Steps to Connect SQL with Power BI
 
@@ -23,7 +26,7 @@ Go to Home → Get Data
 
 Click More
 
-Scroll & select SQL Server
+Select MySQL Database / SQL Server
 
 Enter:
 
@@ -31,37 +34,36 @@ Server Name
 
 Database Name
 
-Choose Windows or Database Authentication
+Select Authentication:
 
-Select required tables
+Windows Authentication (for local machine)
 
-Click Load
+Database Credentials (if hosted)
 
-💡 You are now connected — start creating reports & visuals.
+Choose desired tables → Load
+
+✅ Connection Successful — Now build reports & visuals!
 
 🧮 DAX Measures Used
 Measure Name	DAX Formula	Purpose
-Total Boxes	Total Boxes = SUM(sales[Boxes])	Total units shipped
+Total Boxes	Total Boxes = SUM(sales[Boxes])	Count total units shipped
 Total Amount	Total Amount = SUM(sales[Amount])	Total revenue
-Shipment Count	Shipment Count = COUNTROWS(sales)	Total shipment records
-Low Box Shipment	Low BOX Shipment = CALCULATE([Shipment Count], sales[Boxes] < 50)	Low volume shipments
-LBS %	LBS = DIVIDE([Low BOX Shipment],[Shipment Count])	% of low-volume shipments
+Shipment Count	Shipment Count = COUNTROWS(sales)	Count shipment entries
+Low Box Shipment	Low BOX Shipment = CALCULATE([Shipment Count], sales[Boxes] < 50)	Filter low quantity shipments
+LBS %	LBS = DIVIDE([Low BOX Shipment],[Shipment Count])	Low shipment ratio
 🛠 Tools & Technologies
-Tool/Tech	Use Case
+Tool / Technology	Purpose
 MySQL Workbench	Database & SQL queries
-Power BI Desktop	Data modeling & interactive visualization
-DAX	KPI calculations
-📁 Project Outcomes
+Power BI Desktop	Data modeling & dashboard
+SQL	Data extraction
+DAX	KPI calculation & analytics
+📂 Project Outcome
 
-✅ Connected SQL to Power BI
-
-✅ Imported & cleaned data
-
-✅ Created professional dashboard
-
-✅ Built DAX calculations for KPIs
-
-✅ Delivered business insights
+✅ MySQL connected to Power BI
+✅ Sales data imported & transformed
+✅ DAX KPIs created
+✅ Interactive dashboard built
+✅ Insightful business visualization delivered
 
 🎯 Conclusion
 
